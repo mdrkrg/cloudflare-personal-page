@@ -1,0 +1,13 @@
+.red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: inline-box;
+}
+
+.blank {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  display: inline-box;
+}
