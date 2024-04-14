@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+
+:root {
+  --primary: #c0a9f5;
+  --grey: #7d6ea0;
+  --black: #3b344b;
+  --white: #fff;
+
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --l: 24px;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.u-paragraph {
+  font-size: var(--m);
+  font-weight: normal;
+  color: var(--black);
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.navContainer {
+  margin: 0;
+  background-color: var(--black);
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.navTitle {
+  width: 200px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+
+
+
+.nameContainer {
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--white);
+}
+
+
+.avatarContainer {
+  margin-top: auto;
+  padding: 10% 10%;
+}
+
+.avatar {
+  /* make it responsive */
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 100%;
+
+  border-radius: 50%;
+
+  background-image: url("avatar.jpg");
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+
+
+.linkContainer {
+  height: 40%;
+  padding-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkSubcontainer {
+  margin: auto auto;
+  
+  flex-grow: 1;
+  flex-basis: 0;
+
+}
+
+.linkTitle {
+  font-size: x-large;
+  font-weight: lighter;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 1s;
+}
+.linkTitle:hover {
+  color: var(--primary);
+  transition: color 1s;
+}
+
+.appContainer {
+  min-width: 200px;
+  margin-left: 200px;
+  align-self: center;
+  height: 100%;
+  padding: var(--m) var(--m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.paraContainer p{
+  text-align: center;
+}
