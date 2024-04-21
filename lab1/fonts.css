@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+
+:root {
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --l: 32px;
+  --xl: 64px;
+}
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--m);
+}
+
+header .left h1 {
+  font-size: var(--l);
+  font-weight: lighter;
+}
+
+main h1 {
+  font-size: var(--l);
+  font-weight: lighter;
+}
