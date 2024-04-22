@@ -13,6 +13,8 @@
   --alter2: #8fc4ea;
 }
 
+
+
 html, body {
   height: 100%;
   width: 100%;
@@ -129,6 +131,7 @@ header {
 
 header .left {
  margin: auto 8px;
+ min-width: 200px;
  cursor: default;
 }
 
@@ -197,6 +200,11 @@ header .right nav ul li:hover {
   transition: all 0.5s ease-in;
 }
 
+header .right .expand-widgets {
+  visibility: hidden;
+  width: 0;
+}
+
 main {
   padding: 8px;
   background: var(--white);
@@ -209,6 +217,7 @@ main {
 p + p {
   padding: 8px 0 0 0;
 }
+
 
 footer {
   background-color: var(--grey);
@@ -225,4 +234,29 @@ footer {
 
 footer * {
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    min-width: 0;
+    max-width: 0;
+  }
+  
+  header .right nav {
+    width: 0;
+    visibility: hidden;
+  }
+  
+  header .right button {
+    width: 0;
+    visibility: hidden;
+  }
+  
+  header .right .expand-widgets {
+    visibility: visible;
+    width: auto;
+    font-size: 48px;
+    margin: auto;
+    cursor: pointer;
+  }
 }
