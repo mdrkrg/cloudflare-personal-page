@@ -1,3 +1,18 @@
+:root {
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --ml: 24px;
+  --l: 32px;
+  
+  --primary: #8fcdea;
+  --grey: #5b8395;
+  --dark: #273840;
+  --white: #ffffff;
+  --alter1: #8fd6ea;
+  --alter2: #8fc4ea;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -20,15 +35,75 @@ aside {
   min-width: 200px;
   max-width: 200px;
   height: 100vh;
-  background-color: cyan;
+  background-color: var(--primary);
   
-  flex-grow: 1;
-  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+aside div {
+  width: 90%;
+  height: 48px;
+  
+  margin: 16px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 48px;
+  
+  cursor: pointer;
+  
+  transition: all 0.3s ease-out;
+}
+
+aside div:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  transition: all 0.3s ease-in;
+}
+
+
+aside div span:first-of-type {
+  margin-left: 8px;
+}
+
+aside div span:last-of-type {
+  margin-right: 8px;
+}
+
+
+aside div span.asideText {
+  margin-left: 16px;
+  flex-basis: 1;
+  flex-grow: 2;
+}
+
+
+aside .aside-panel-close {
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 0;
+  background-color: var(--alter2);
+  
+  transition: all 0.3s ease-out;
+}
+
+aside .aside-panel-close:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+  color: var(--white);
+  
+  transition: all 0.3s ease-in;
+}
+
+
 
 .appContainer {
   height: 100%;
-  background-color: #aaaaaa;
+  
   display: flex;
   justify-self: flex-end;
   flex-direction: column;
@@ -41,9 +116,8 @@ aside {
 header {
   max-height: 64px;
   min-height: 64px;
-  background-color: #bbbbbb;
-  
-  overflow: auto;
+  background-color: var(--grey);
+  color: var(--white);
   
   flex-grow: 1;
   flex-basis: 0;
@@ -54,11 +128,12 @@ header {
 }
 
 header .left {
- margin: auto; 
+ margin: auto 8px;
+ cursor: default;
 }
 
 header .right {
-  margin: auto; 
+  margin: 0; 
   flex-grow: 2;
   flex-basis: 2;
   
@@ -67,8 +142,23 @@ header .right {
 }
 
 header .right button {
+  min-width: 64px;
   flex-grow: 0;
-  flex-basis: 1;
+  flex-basis: 2;
+  height: 100%;
+  margin-left: var(--s);
+  border: none;
+  background-color: var(--grey);
+  color: var(--white);
+  
+  
+  transition: all 1s;
+}
+
+header .right button:hover {
+  background-color: var(--dark);
+  transition: all 1s;
+  cursor: pointer;
 }
 
 
@@ -78,30 +168,59 @@ header .right nav {
 }
 
 header .right nav ul {
+  padding-left: 8px;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
 
+header .right nav ul li {
+  margin: 8px 0 8px 8px;
+  
+  height: calc(64px - 16px);
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--l);
+  transition: all 0.5s ease-in;
+}
+
+header .right nav ul li:hover {
+  background-color: var(--dark);
+  transition: all 0.5s ease-in;
+}
 
 main {
-  background: #cccccc;
+  padding: 8px;
+  background: var(--white);
   flex-grow: 5;
   flex-basis: 0;
   height: calc(100vh - 64px - 32px);
   overflow: auto;
 }
 
+p + p {
+  padding: 8px 0 0 0;
+}
+
 footer {
-  background-color: violet;
-  max-height: 32px;
-  min-height: 32px;
+  background-color: var(--grey);
+  max-height: 16px;
+  min-height: 16px;
   flex-grow: 0;
   flex-basis: 0;
   
   display: flex;
   align-content: center;
   justify-content: center;
+  cursor: default;
 }
 
 footer * {

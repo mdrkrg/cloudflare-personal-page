@@ -4,13 +4,32 @@
   --xs: 4px;
   --s: 8px;
   --m: 16px;
+  --ml: 24px;
   --l: 32px;
-  --xl: 64px;
+  
+  --primary: #8fcdea;
+  --grey: #5b8395;
+  --dark: #273840;
+  --white: #ffffff;
+  --alter1: #8fd6ea;
+  --alter2: #8fc4ea;
 }
+
 
 html, body {
   font-family: "Open Sans", sans-serif;
   font-size: var(--m);
+}
+
+aside div {
+  font-size: var(--ml);
+  color: var(--dark);
+}
+
+
+aside .aside-panel-close {
+  font-size: var(--l);
+  color: var(--dark);
 }
 
 header .left h1 {
@@ -21,4 +40,15 @@ header .left h1 {
 main h1 {
   font-size: var(--l);
   font-weight: lighter;
+}
+
+header .right a {
+  text-decoration: none;
+  font-size: var(--m);
+  color: var(--white);
+}
+
+footer {
+  font-size: var(--s);
+  color: var(--white);
 }
